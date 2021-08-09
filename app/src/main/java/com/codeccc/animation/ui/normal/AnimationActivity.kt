@@ -1,9 +1,6 @@
 package com.codeccc.animation.ui.normal
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.AnimatorSet
-import android.animation.ValueAnimator
+import android.animation.*
 import android.os.Bundle
 import android.view.animation.*
 import androidx.appcompat.app.AppCompatActivity
@@ -113,6 +110,26 @@ class AnimationActivity : AppCompatActivity() {
                             animationView.rotation = 0f
                         }
                     })
+                    .start()
+            }
+            btnAnim6.setOnClickListener {
+                //关键帧动画
+                val kf0 = Keyframe.ofFloat(0f, 0f)
+                val kf1 = Keyframe.ofFloat(.5f, 360f)
+                val kf2 = Keyframe.ofFloat(1f, 0f)
+                val pvhRotation = PropertyValuesHolder.ofKeyframe("rotation", kf0, kf1, kf2)
+                val animator =
+                    ObjectAnimator.ofPropertyValuesHolder(animationView, pvhRotation).apply {
+                        duration = 2000
+                    }
+                animator.interpolator = AccelerateInterpolator()
+                animator.start()
+            }
+
+            btnAnim7.setOnClickListener {
+                //使用ObjectAnimator一行代码执行动画
+                ObjectAnimator.ofFloat(animationView, "rotation", 0f, 360f)
+                    .setDuration(500)
                     .start()
             }
         }
