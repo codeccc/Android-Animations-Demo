@@ -4,6 +4,7 @@ import android.animation.*
 import android.os.Bundle
 import android.view.animation.*
 import androidx.appcompat.app.AppCompatActivity
+import com.codeccc.animation.R
 import com.codeccc.animation.databinding.ActivityAnimationBinding
 
 /**
@@ -22,7 +23,6 @@ class AnimationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         _binding = ActivityAnimationBinding.inflate(layoutInflater)
-
         setContentView(binding.root)
 
         binding.apply {
@@ -134,5 +134,16 @@ class AnimationActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // 播放默认view动画
+        (AnimatorInflater.loadAnimator(this, R.animator.animator_enter_default) as AnimatorSet)
+            .apply {
+                //设置动画目标view
+                setTarget(binding.animationView)
+                start()
+            }
     }
 }
