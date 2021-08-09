@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.codeccc.animation.R
 import com.codeccc.animation.databinding.FragmentHomeBinding
 import com.codeccc.animation.ui.normal.AnimationActivity
+import com.codeccc.animation.ui.vector_animation.VectorAnimationActivity
 
 class HomeFragment : Fragment() {
 
@@ -54,7 +55,7 @@ class HomeFragment : Fragment() {
                             startActivity(Intent(context, AnimationActivity::class.java))
                         }
                         1 -> {
-
+                            startActivity(Intent(context, VectorAnimationActivity::class.java))
                         }
                     }
                 }

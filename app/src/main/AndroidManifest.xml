@@ -21,6 +21,9 @@
         <activity
             android:name=".ui.normal.AnimationActivity"
             android:label="属性动画" />
+        <activity
+            android:name=".ui.vector_animation.VectorAnimationActivity"
+            android:label="可绘制图形动画" />
     </application>
 
 </manifest>
