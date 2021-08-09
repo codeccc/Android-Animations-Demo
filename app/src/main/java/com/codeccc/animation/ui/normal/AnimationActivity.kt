@@ -1,6 +1,7 @@
 package com.codeccc.animation.ui.normal
 
 import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ValueAnimator
 import android.os.Bundle
@@ -11,8 +12,8 @@ import com.codeccc.animation.databinding.ActivityAnimationBinding
 /**
  * Author : wangbo
  * Date : 2021/8/6
- * Function : TODO 请在这里输入文件用途
- * Desc : TODO 请在这里输入文件描述
+ * Function :
+ * Desc :
  */
 class AnimationActivity : AppCompatActivity() {
 
@@ -102,29 +103,14 @@ class AnimationActivity : AppCompatActivity() {
                     .rotation(360f)
                     .setDuration(500)
                     .setInterpolator(AnticipateOvershootInterpolator())
-                    .setListener(object : Animator.AnimatorListener {
-                        override fun onAnimationStart(animation: Animator?, isReverse: Boolean) {
-                        }
-
-                        override fun onAnimationStart(animation: Animator?) {
-                        }
-
-                        override fun onAnimationEnd(animation: Animator?, isReverse: Boolean) {
-                            super.onAnimationEnd(animation, isReverse)
-                        }
-
+                    .setListener(object : AnimatorListenerAdapter() {
                         override fun onAnimationEnd(animation: Animator?) {
+                            super.onAnimationEnd(animation)
                             //回到动画初始状态
                             animationView.scaleX = 0.5f
                             animationView.scaleY = 0.5f
                             animationView.alpha = 1f
                             animationView.rotation = 0f
-                        }
-
-                        override fun onAnimationCancel(animation: Animator?) {
-                        }
-
-                        override fun onAnimationRepeat(animation: Animator?) {
                         }
                     })
                     .start()
