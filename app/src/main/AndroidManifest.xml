@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.codeccc.animation">
 
     <application
@@ -31,6 +32,12 @@
         <activity
             android:name=".ui.normal.MoveViewActivity"
             android:label="使用动画移动视图" />
+        <activity
+            android:name=".ui.fling.FlingActivity"
+            android:label="使用Fling动画移动视图" />
+        <activity
+            android:name=".ui.zoom.ZoomActivity"
+            android:label="使用缩放动画放大视图" />
     </application>
 
 </manifest>

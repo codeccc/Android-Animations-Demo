@@ -7,15 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.codeccc.animation.R
 import com.codeccc.animation.databinding.FragmentHomeBinding
 import com.codeccc.animation.ui.normal.AnimationActivity
+import com.codeccc.animation.ui.fling.FlingActivity
 import com.codeccc.animation.ui.normal.MoveViewActivity
 import com.codeccc.animation.ui.normal.ShowOrHideActivity
 import com.codeccc.animation.ui.vector_animation.VectorAnimationActivity
+import com.codeccc.animation.ui.zoom.ZoomActivity
 
 class HomeFragment : Fragment() {
 
@@ -64,6 +65,12 @@ class HomeFragment : Fragment() {
                         }
                         3 -> {
                             startActivity(Intent(context, MoveViewActivity::class.java))
+                        }
+                        4 -> {
+                            startActivity(Intent(context, FlingActivity::class.java))
+                        }
+                        5 -> {
+                            startActivity(Intent(context, ZoomActivity::class.java))
                         }
                     }
                 }
