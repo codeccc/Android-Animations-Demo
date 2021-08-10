@@ -24,6 +24,13 @@
         <activity
             android:name=".ui.vector_animation.VectorAnimationActivity"
             android:label="可绘制图形动画" />
+
+        <activity
+            android:name=".ui.normal.ShowOrHideActivity"
+            android:label="使用动画显示隐藏视图" />
+        <activity
+            android:name=".ui.normal.MoveViewActivity"
+            android:label="使用动画移动视图" />
     </application>
 
 </manifest>
