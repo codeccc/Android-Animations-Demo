@@ -1,6 +1,9 @@
 package com.codeccc.animation.ui.scene
 
 import android.os.Bundle
+import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.transition.*
 import com.codeccc.animation.R
@@ -46,6 +49,8 @@ class SceneActivity : AppCompatActivity() {
                 TransitionManager.go(aScene, autoTransition)
                 curScene = aScene
             }
+
+
         }
 
         binding.btnStart2.setOnClickListener {
@@ -60,6 +65,21 @@ class SceneActivity : AppCompatActivity() {
                 curScene = aScene
             }
         }
+
+        binding.btnStart3.setOnClickListener {
+            //应用没有场景的过渡
+            val newText = TextView(this).apply {
+                text = "没有场景的过渡示例"
+                id = R.id.text
+            }
+            //创建过渡效果Transition
+            val fade = Fade(Fade.IN)
+            //设置场景父容器及transition
+            TransitionManager.beginDelayedTransition(binding.container, fade)
+            //添加view
+            binding.container.addView(newText)
+        }
+
     }
 
 }
