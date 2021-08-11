@@ -2,8 +2,9 @@
 <transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
     android:transitionOrdering="sequential">
     <fade android:fadingMode="fade_out" />
+    <changeScroll />
     <changeBounds />
-    <changeImageTransform/>
+    <changeImageTransform />
     <fade android:fadingMode="fade_in" />
 
 </transitionSet>

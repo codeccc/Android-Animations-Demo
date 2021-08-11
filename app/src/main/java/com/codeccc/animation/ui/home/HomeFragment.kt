@@ -17,8 +17,10 @@ import com.codeccc.animation.ui.layout.AnimateLayoutChangeActivity
 import com.codeccc.animation.ui.normal.MoveViewActivity
 import com.codeccc.animation.ui.normal.ShowOrHideActivity
 import com.codeccc.animation.ui.scene.SceneActivity
+import com.codeccc.animation.ui.scene.SceneCustomActivity
 import com.codeccc.animation.ui.spring.SpringActivity
-import com.codeccc.animation.ui.vector_animation.VectorAnimationActivity
+import com.codeccc.animation.ui.transition.TransitionAActivity
+import com.codeccc.animation.ui.vector.VectorAnimationActivity
 import com.codeccc.animation.ui.zoom.ZoomActivity
 
 class HomeFragment : Fragment() {
@@ -83,6 +85,12 @@ class HomeFragment : Fragment() {
                         }
                         8 -> {
                             startActivity(Intent(context, SceneActivity::class.java))
+                        }
+                        9 -> {
+                            startActivity(Intent(context, SceneCustomActivity::class.java))
+                        }
+                        10 -> {
+                            startActivity(Intent(context, TransitionAActivity::class.java))
                         }
                     }
                 }

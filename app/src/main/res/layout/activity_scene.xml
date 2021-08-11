@@ -1,53 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/master_layout"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnStart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:stateListAnimator="@xml/anim_scale"
-        android:text="执行" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnStart2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:stateListAnimator="@xml/anim_scale"
-        android:text="加载TransitionSet"
-        android:textAllCaps="false" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnStart3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:stateListAnimator="@xml/anim_scale"
-        android:text="应用没有场景的过渡"
-        android:textAllCaps="false" />
-
-    <FrameLayout
-        android:id="@+id/scene_root"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <include layout="@layout/a_scene" />
-    </FrameLayout>
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/container"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:background="#f2f2f2" />
+        android:id="@+id/master_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:stateListAnimator="@xml/anim_scale"
+            android:text="执行" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStart2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:stateListAnimator="@xml/anim_scale"
+            android:text="加载TransitionSet"
+            android:textAllCaps="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStart3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:stateListAnimator="@xml/anim_scale"
+            android:text="应用没有场景的过渡"
+            android:textAllCaps="false" />
+
+        <FrameLayout
+            android:id="@+id/scene_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/a_scene" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="#f2f2f2"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

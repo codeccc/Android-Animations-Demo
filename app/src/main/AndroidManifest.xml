@@ -23,7 +23,7 @@
             android:name=".ui.normal.AnimationActivity"
             android:label="属性动画" />
         <activity
-            android:name=".ui.vector_animation.VectorAnimationActivity"
+            android:name=".ui.vector.VectorAnimationActivity"
             android:label="可绘制图形动画" />
 
         <activity
@@ -47,6 +47,17 @@
         <activity
             android:name=".ui.scene.SceneActivity"
             android:label="过渡场景动画" />
+        <activity
+            android:name=".ui.scene.SceneCustomActivity"
+            android:label="创建自定义过渡动画" />
+        <activity
+            android:name=".ui.transition.TransitionAActivity"
+            android:theme="@style/Theme.Transition"
+            android:label="使用动画启动Activity" />
+        <activity
+            android:name=".ui.transition.TransitionBActivity"
+            android:label="使用动画启动Activity"
+            android:theme="@style/Theme.Transition" />
     </application>
 
 </manifest>
