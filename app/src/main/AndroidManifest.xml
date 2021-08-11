@@ -38,6 +38,15 @@
         <activity
             android:name=".ui.zoom.ZoomActivity"
             android:label="使用缩放动画放大视图" />
+        <activity
+            android:name=".ui.spring.SpringActivity"
+            android:label="弹簧动画" />
+        <activity
+            android:name=".ui.layout.AnimateLayoutChangeActivity"
+            android:label="自动为布局更新添加动画" />
+        <activity
+            android:name=".ui.scene.SceneActivity"
+            android:label="过渡场景动画" />
     </application>
 
 </manifest>

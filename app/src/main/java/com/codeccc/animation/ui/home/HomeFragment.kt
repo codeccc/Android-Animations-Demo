@@ -13,8 +13,11 @@ import com.codeccc.animation.R
 import com.codeccc.animation.databinding.FragmentHomeBinding
 import com.codeccc.animation.ui.normal.AnimationActivity
 import com.codeccc.animation.ui.fling.FlingActivity
+import com.codeccc.animation.ui.layout.AnimateLayoutChangeActivity
 import com.codeccc.animation.ui.normal.MoveViewActivity
 import com.codeccc.animation.ui.normal.ShowOrHideActivity
+import com.codeccc.animation.ui.scene.SceneActivity
+import com.codeccc.animation.ui.spring.SpringActivity
 import com.codeccc.animation.ui.vector_animation.VectorAnimationActivity
 import com.codeccc.animation.ui.zoom.ZoomActivity
 
@@ -71,6 +74,15 @@ class HomeFragment : Fragment() {
                         }
                         5 -> {
                             startActivity(Intent(context, ZoomActivity::class.java))
+                        }
+                        6 -> {
+                            startActivity(Intent(context, SpringActivity::class.java))
+                        }
+                        7 -> {
+                            startActivity(Intent(context, AnimateLayoutChangeActivity::class.java))
+                        }
+                        8 -> {
+                            startActivity(Intent(context, SceneActivity::class.java))
                         }
                     }
                 }
