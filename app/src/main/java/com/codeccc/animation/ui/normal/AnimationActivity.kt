@@ -108,6 +108,9 @@ class AnimationActivity : AppCompatActivity() {
                             animationView.scaleY = 0.5f
                             animationView.alpha = 1f
                             animationView.rotation = 0f
+
+                            //动画结束移除监听
+                            animation?.removeListener(this)
                         }
                     })
                     .start()
